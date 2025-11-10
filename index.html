@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HDFC Personal Loan Ad</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #e8f0ff, #ffffff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .ad-container {
+      position: relative;
+      background: #f8fbff;
+      width: 90%;
+      max-width: 450px;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: left;
+      overflow: hidden;
+      opacity: 0;
+      transition: opacity 1.5s ease;
+    }
+
+    .logo {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 100px;
+    }
+
+    .text {
+      margin-top: 50px;
+    }
+
+    .text h2 {
+      font-size: 1.8rem;
+      color: #002970;
+    }
+
+    .text h2 span {
+      color: #d71a28;
+    }
+
+    .text p {
+      font-size: 1.1rem;
+      margin-top: 10px;
+      color: #333;
+    }
+
+    .emi {
+      background: #fff;
+      border-left: 4px solid #d71a28;
+      margin-top: 15px;
+      padding: 10px;
+      font-weight: 600;
+      color: #333;
+      border-radius: 5px;
+    }
+
+    .emi span {
+      color: #d71a28;
+      font-size: 1.3rem;
+    }
+
+    .person-img {
+      display: block;
+      margin: 20px auto 0;
+      width: 80%;
+      border-radius: 15px;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      background-color: #002970;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 12px;
+      font-size: 1.1rem;
+      margin-top: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #d71a28;
+      transform: scale(1.05);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      .text h2 {
+        font-size: 1.4rem;
+      }
+      .emi {
+        font-size: 1rem;
+      }
+      .logo {
+        width: 80px;
+      }
+      .btn {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="ad-container">
+    <img src="logo.png" alt="HDFC Logo" class="logo" />
+    <div class="text">
+      <h2>Get your <span>Personal Loan</span> today!</h2>
+      <p class="emi">EMI starting at <span>₹2,149/Lakh*</span></p>
+    </div>
+
+    <img src="person.jpg" alt="Person showing phone" class="person-img" />
+
+    <button class="btn" id="eligibilityBtn">Check Eligibility</button>
+  </div>
+
+  <script>
+    // Fade-in animation
+    window.addEventListener("load", () => {
+      document.querySelector(".ad-container").style.opacity = "1";
+    });
+
+    // Button click redirect
+    document.getElementById("eligibilityBtn").addEventListener("click", () => {
+      window.location.href = "https://jade-zabaione-6a66ee.netlify.app/"; // Change this URL if needed
+    });
+  </script>
+</body>
+</html>
